@@ -15,7 +15,8 @@ gdjs.evtsExt__SpriteMultitouchJoystick__SetButtonState.eventsList0 = function(ru
 
 let isConditionTrue_0 = false;
 {
-{/* Unknown instruction - skipped. */}}
+{gdjs.VariablesContainer.badVariable.setString(eventsFunctionContext.getArgument("ButtonState"));
+}}
 
 }
 
@@ -30,6 +31,9 @@ var eventsFunctionContext = {
 },
   _behaviorNamesMap: {
 },
+  globalVariablesForExtension: runtimeScene.getGame().getVariablesForExtension("SpriteMultitouchJoystick"),
+  sceneVariablesForExtension: runtimeScene.getScene().getVariablesForExtension("SpriteMultitouchJoystick"),
+  localVariables: [],
   getObjects: function(objectName) {
     return eventsFunctionContext._objectArraysMap[objectName] || [];
   },
@@ -77,6 +81,7 @@ if (argName === "ButtonState") return ButtonState;
 
 
 gdjs.evtsExt__SpriteMultitouchJoystick__SetButtonState.eventsList0(runtimeScene, eventsFunctionContext);
+
 
 return;
 }

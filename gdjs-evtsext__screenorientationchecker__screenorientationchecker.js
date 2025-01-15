@@ -114,7 +114,7 @@ gdjs.evtsExt__ScreenOrientationChecker__ScreenOrientationChecker.ScreenOrientati
 
 let isConditionTrue_0 = false;
 isConditionTrue_0 = false;
-isConditionTrue_0 = gdjs.evtTools.variable.getVariableString(eventsFunctionContext.globalVariablesForExtension.getFromIndex(0)) == "portrait";
+isConditionTrue_0 = gdjs.evtTools.variable.getVariableString(gdjs.VariablesContainer.badVariable) == "portrait";
 if (isConditionTrue_0) {
 gdjs.copyArray(eventsFunctionContext.getObjects("Object"), gdjs.evtsExt__ScreenOrientationChecker__ScreenOrientationChecker.ScreenOrientationChecker.prototype.doStepPostEventsContext.GDObjectObjects3);
 {for(var i = 0, len = gdjs.evtsExt__ScreenOrientationChecker__ScreenOrientationChecker.ScreenOrientationChecker.prototype.doStepPostEventsContext.GDObjectObjects3.length ;i < len;++i) {
@@ -130,7 +130,7 @@ gdjs.copyArray(eventsFunctionContext.getObjects("Object"), gdjs.evtsExt__ScreenO
 
 let isConditionTrue_0 = false;
 isConditionTrue_0 = false;
-isConditionTrue_0 = gdjs.evtTools.variable.getVariableString(eventsFunctionContext.globalVariablesForExtension.getFromIndex(0)) != "portrait";
+isConditionTrue_0 = gdjs.evtTools.variable.getVariableString(gdjs.VariablesContainer.badVariable) != "portrait";
 if (isConditionTrue_0) {
 gdjs.copyArray(eventsFunctionContext.getObjects("Object"), gdjs.evtsExt__ScreenOrientationChecker__ScreenOrientationChecker.ScreenOrientationChecker.prototype.doStepPostEventsContext.GDObjectObjects2);
 {for(var i = 0, len = gdjs.evtsExt__ScreenOrientationChecker__ScreenOrientationChecker.ScreenOrientationChecker.prototype.doStepPostEventsContext.GDObjectObjects2.length ;i < len;++i) {
@@ -148,7 +148,7 @@ gdjs.copyArray(eventsFunctionContext.getObjects("Object"), gdjs.evtsExt__ScreenO
 
 let isConditionTrue_0 = false;
 isConditionTrue_0 = false;
-isConditionTrue_0 = gdjs.evtTools.variable.getVariableString(eventsFunctionContext.globalVariablesForExtension.getFromIndex(0)) == "landscape";
+isConditionTrue_0 = gdjs.evtTools.variable.getVariableString(gdjs.VariablesContainer.badVariable) == "landscape";
 if (isConditionTrue_0) {
 gdjs.copyArray(eventsFunctionContext.getObjects("Object"), gdjs.evtsExt__ScreenOrientationChecker__ScreenOrientationChecker.ScreenOrientationChecker.prototype.doStepPostEventsContext.GDObjectObjects2);
 {for(var i = 0, len = gdjs.evtsExt__ScreenOrientationChecker__ScreenOrientationChecker.ScreenOrientationChecker.prototype.doStepPostEventsContext.GDObjectObjects2.length ;i < len;++i) {
@@ -164,7 +164,7 @@ gdjs.copyArray(eventsFunctionContext.getObjects("Object"), gdjs.evtsExt__ScreenO
 
 let isConditionTrue_0 = false;
 isConditionTrue_0 = false;
-isConditionTrue_0 = gdjs.evtTools.variable.getVariableString(eventsFunctionContext.globalVariablesForExtension.getFromIndex(0)) == "portrait";
+isConditionTrue_0 = gdjs.evtTools.variable.getVariableString(gdjs.VariablesContainer.badVariable) == "portrait";
 if (isConditionTrue_0) {
 gdjs.copyArray(eventsFunctionContext.getObjects("Object"), gdjs.evtsExt__ScreenOrientationChecker__ScreenOrientationChecker.ScreenOrientationChecker.prototype.doStepPostEventsContext.GDObjectObjects1);
 {for(var i = 0, len = gdjs.evtsExt__ScreenOrientationChecker__ScreenOrientationChecker.ScreenOrientationChecker.prototype.doStepPostEventsContext.GDObjectObjects1.length ;i < len;++i) {

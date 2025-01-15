@@ -25,7 +25,8 @@ isConditionTrue_0 = false;
 {isConditionTrue_0 = ((typeof eventsFunctionContext !== 'undefined' ? Number(eventsFunctionContext.getArgument("CurrentSpeed")) || 0 : 0) < eventsFunctionContext.getArgument("TargetedSpeed"));
 }
 if (isConditionTrue_0) {
-{/* Unknown instruction - skipped. */}}
+{gdjs.VariablesContainer.badVariable.setNumber(Math.min(eventsFunctionContext.getArgument("TargetedSpeed"), eventsFunctionContext.getArgument("CurrentSpeed") + eventsFunctionContext.getArgument("Acceleration") * gdjs.evtTools.runtimeScene.getElapsedTimeInSeconds(runtimeScene)));
+}}
 
 }
 
@@ -43,7 +44,8 @@ isConditionTrue_0 = false;
 }
 }
 if (isConditionTrue_0) {
-{/* Unknown instruction - skipped. */}}
+{gdjs.VariablesContainer.badVariable.sub(eventsFunctionContext.getArgument("Acceleration") * gdjs.evtTools.runtimeScene.getElapsedTimeInSeconds(runtimeScene));
+}}
 
 }
 
@@ -63,7 +65,8 @@ isConditionTrue_0 = false;
 {isConditionTrue_0 = ((typeof eventsFunctionContext !== 'undefined' ? Number(eventsFunctionContext.getArgument("CurrentSpeed")) || 0 : 0) >= 0);
 }
 if (isConditionTrue_0) {
-{/* Unknown instruction - skipped. */}}
+{gdjs.VariablesContainer.badVariable.setNumber(Math.max(eventsFunctionContext.getArgument("TargetedSpeed"), eventsFunctionContext.getArgument("CurrentSpeed") - Math.max(eventsFunctionContext.getArgument("Acceleration"), eventsFunctionContext.getArgument("Deceleration")) * gdjs.evtTools.runtimeScene.getElapsedTimeInSeconds(runtimeScene)));
+}}
 
 }
 
@@ -85,7 +88,8 @@ isConditionTrue_0 = false;
 {isConditionTrue_0 = ((typeof eventsFunctionContext !== 'undefined' ? Number(eventsFunctionContext.getArgument("CurrentSpeed")) || 0 : 0) > eventsFunctionContext.getArgument("TargetedSpeed"));
 }
 if (isConditionTrue_0) {
-{/* Unknown instruction - skipped. */}}
+{gdjs.VariablesContainer.badVariable.setNumber(Math.max(eventsFunctionContext.getArgument("TargetedSpeed"), eventsFunctionContext.getArgument("CurrentSpeed") - eventsFunctionContext.getArgument("Acceleration") * gdjs.evtTools.runtimeScene.getElapsedTimeInSeconds(runtimeScene)));
+}}
 
 }
 
@@ -103,7 +107,8 @@ isConditionTrue_0 = false;
 }
 }
 if (isConditionTrue_0) {
-{/* Unknown instruction - skipped. */}}
+{gdjs.VariablesContainer.badVariable.add(eventsFunctionContext.getArgument("Acceleration") * gdjs.evtTools.runtimeScene.getElapsedTimeInSeconds(runtimeScene));
+}}
 
 }
 
@@ -123,7 +128,8 @@ isConditionTrue_0 = false;
 {isConditionTrue_0 = ((typeof eventsFunctionContext !== 'undefined' ? Number(eventsFunctionContext.getArgument("CurrentSpeed")) || 0 : 0) <= 0);
 }
 if (isConditionTrue_0) {
-{/* Unknown instruction - skipped. */}}
+{gdjs.VariablesContainer.badVariable.setNumber(Math.min(eventsFunctionContext.getArgument("TargetedSpeed"), eventsFunctionContext.getArgument("CurrentSpeed") + Math.max(eventsFunctionContext.getArgument("Acceleration"), eventsFunctionContext.getArgument("Deceleration")) * gdjs.evtTools.runtimeScene.getElapsedTimeInSeconds(runtimeScene)));
+}}
 
 }
 
@@ -138,7 +144,8 @@ isConditionTrue_0 = false;
 {isConditionTrue_0 = ((typeof eventsFunctionContext !== 'undefined' ? Number(eventsFunctionContext.getArgument("CurrentSpeed")) || 0 : 0) < 0);
 }
 if (isConditionTrue_0) {
-{/* Unknown instruction - skipped. */}}
+{gdjs.VariablesContainer.badVariable.setNumber(Math.min(0, eventsFunctionContext.getArgument("CurrentSpeed") + eventsFunctionContext.getArgument("Acceleration") * gdjs.evtTools.runtimeScene.getElapsedTimeInSeconds(runtimeScene)));
+}}
 
 }
 
@@ -151,7 +158,8 @@ isConditionTrue_0 = false;
 {isConditionTrue_0 = ((typeof eventsFunctionContext !== 'undefined' ? Number(eventsFunctionContext.getArgument("CurrentSpeed")) || 0 : 0) > 0);
 }
 if (isConditionTrue_0) {
-{/* Unknown instruction - skipped. */}}
+{gdjs.VariablesContainer.badVariable.setNumber(Math.max(0, eventsFunctionContext.getArgument("CurrentSpeed") - eventsFunctionContext.getArgument("Acceleration") * gdjs.evtTools.runtimeScene.getElapsedTimeInSeconds(runtimeScene)));
+}}
 
 }
 
@@ -223,7 +231,8 @@ let isConditionTrue_0 = false;
 
 let isConditionTrue_0 = false;
 {
-{/* Unknown instruction - skipped. */}
+{gdjs.VariablesContainer.badVariable.setNumber(eventsFunctionContext.getArgument("CurrentSpeed"));
+}
 { //Subevents
 gdjs.evtsExt__SpriteMultitouchJoystick__AcceleratedSpeed.eventsList3(runtimeScene, eventsFunctionContext);} //End of subevents
 }
@@ -241,6 +250,9 @@ var eventsFunctionContext = {
 },
   _behaviorNamesMap: {
 },
+  globalVariablesForExtension: runtimeScene.getGame().getVariablesForExtension("SpriteMultitouchJoystick"),
+  sceneVariablesForExtension: runtimeScene.getScene().getVariablesForExtension("SpriteMultitouchJoystick"),
+  localVariables: [],
   getObjects: function(objectName) {
     return eventsFunctionContext._objectArraysMap[objectName] || [];
   },
@@ -290,6 +302,7 @@ if (argName === "Deceleration") return Deceleration;
 
 
 gdjs.evtsExt__SpriteMultitouchJoystick__AcceleratedSpeed.eventsList4(runtimeScene, eventsFunctionContext);
+
 
 return Number(eventsFunctionContext.returnValue) || 0;
 }

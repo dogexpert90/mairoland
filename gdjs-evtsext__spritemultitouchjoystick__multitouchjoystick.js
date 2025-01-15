@@ -46,6 +46,41 @@ gdjs.evtsExt__SpriteMultitouchJoystick__MultitouchJoystick.MultitouchJoystick = 
     return true;
   }
 
+  // Network sync:
+  getNetworkSyncData() {
+    return {
+      ...super.getNetworkSyncData(),
+      props: {
+        
+    ControllerIdentifier: this._behaviorData.ControllerIdentifier,
+    JoystickIdentifier: this._behaviorData.JoystickIdentifier,
+    DeadZoneRadius: this._behaviorData.DeadZoneRadius,
+    JoystickAngle: this._behaviorData.JoystickAngle,
+    JoystickForce: this._behaviorData.JoystickForce,
+    TouchId: this._behaviorData.TouchId,
+    TouchIndex: this._behaviorData.TouchIndex,
+      }
+    };
+  }
+  updateFromNetworkSyncData(networkSyncData) {
+    super.updateFromNetworkSyncData(networkSyncData);
+    
+    if (networkSyncData.props.ControllerIdentifier !== undefined)
+      this._behaviorData.ControllerIdentifier = networkSyncData.props.ControllerIdentifier;
+    if (networkSyncData.props.JoystickIdentifier !== undefined)
+      this._behaviorData.JoystickIdentifier = networkSyncData.props.JoystickIdentifier;
+    if (networkSyncData.props.DeadZoneRadius !== undefined)
+      this._behaviorData.DeadZoneRadius = networkSyncData.props.DeadZoneRadius;
+    if (networkSyncData.props.JoystickAngle !== undefined)
+      this._behaviorData.JoystickAngle = networkSyncData.props.JoystickAngle;
+    if (networkSyncData.props.JoystickForce !== undefined)
+      this._behaviorData.JoystickForce = networkSyncData.props.JoystickForce;
+    if (networkSyncData.props.TouchId !== undefined)
+      this._behaviorData.TouchId = networkSyncData.props.TouchId;
+    if (networkSyncData.props.TouchIndex !== undefined)
+      this._behaviorData.TouchIndex = networkSyncData.props.TouchIndex;
+  }
+
   // Properties:
   
   _getControllerIdentifier() {
@@ -158,6 +193,9 @@ var eventsFunctionContext = {
   _behaviorNamesMap: {
 "Behavior": Behavior
 },
+  globalVariablesForExtension: runtimeScene.getGame().getVariablesForExtension("SpriteMultitouchJoystick"),
+  sceneVariablesForExtension: runtimeScene.getScene().getVariablesForExtension("SpriteMultitouchJoystick"),
+  localVariables: [],
   getObjects: function(objectName) {
     return eventsFunctionContext._objectArraysMap[objectName] || [];
   },
@@ -204,6 +242,9 @@ gdjs.evtsExt__SpriteMultitouchJoystick__MultitouchJoystick.MultitouchJoystick.pr
 gdjs.evtsExt__SpriteMultitouchJoystick__MultitouchJoystick.MultitouchJoystick.prototype.onCreatedContext.GDObjectObjects2.length = 0;
 
 gdjs.evtsExt__SpriteMultitouchJoystick__MultitouchJoystick.MultitouchJoystick.prototype.onCreatedContext.eventsList0(runtimeScene, eventsFunctionContext);
+gdjs.evtsExt__SpriteMultitouchJoystick__MultitouchJoystick.MultitouchJoystick.prototype.onCreatedContext.GDObjectObjects1.length = 0;
+gdjs.evtsExt__SpriteMultitouchJoystick__MultitouchJoystick.MultitouchJoystick.prototype.onCreatedContext.GDObjectObjects2.length = 0;
+
 
 return;
 }
@@ -247,6 +288,9 @@ var eventsFunctionContext = {
   _behaviorNamesMap: {
 "Behavior": Behavior
 },
+  globalVariablesForExtension: runtimeScene.getGame().getVariablesForExtension("SpriteMultitouchJoystick"),
+  sceneVariablesForExtension: runtimeScene.getScene().getVariablesForExtension("SpriteMultitouchJoystick"),
+  localVariables: [],
   getObjects: function(objectName) {
     return eventsFunctionContext._objectArraysMap[objectName] || [];
   },
@@ -293,6 +337,9 @@ gdjs.evtsExt__SpriteMultitouchJoystick__MultitouchJoystick.MultitouchJoystick.pr
 gdjs.evtsExt__SpriteMultitouchJoystick__MultitouchJoystick.MultitouchJoystick.prototype.onDeActivateContext.GDObjectObjects2.length = 0;
 
 gdjs.evtsExt__SpriteMultitouchJoystick__MultitouchJoystick.MultitouchJoystick.prototype.onDeActivateContext.eventsList0(runtimeScene, eventsFunctionContext);
+gdjs.evtsExt__SpriteMultitouchJoystick__MultitouchJoystick.MultitouchJoystick.prototype.onDeActivateContext.GDObjectObjects1.length = 0;
+gdjs.evtsExt__SpriteMultitouchJoystick__MultitouchJoystick.MultitouchJoystick.prototype.onDeActivateContext.GDObjectObjects2.length = 0;
+
 
 return;
 }
@@ -501,6 +548,9 @@ var eventsFunctionContext = {
   _behaviorNamesMap: {
 "Behavior": Behavior
 },
+  globalVariablesForExtension: runtimeScene.getGame().getVariablesForExtension("SpriteMultitouchJoystick"),
+  sceneVariablesForExtension: runtimeScene.getScene().getVariablesForExtension("SpriteMultitouchJoystick"),
+  localVariables: [],
   getObjects: function(objectName) {
     return eventsFunctionContext._objectArraysMap[objectName] || [];
   },
@@ -550,6 +600,12 @@ gdjs.evtsExt__SpriteMultitouchJoystick__MultitouchJoystick.MultitouchJoystick.pr
 gdjs.evtsExt__SpriteMultitouchJoystick__MultitouchJoystick.MultitouchJoystick.prototype.doStepPreEventsContext.GDObjectObjects5.length = 0;
 
 gdjs.evtsExt__SpriteMultitouchJoystick__MultitouchJoystick.MultitouchJoystick.prototype.doStepPreEventsContext.eventsList4(runtimeScene, eventsFunctionContext);
+gdjs.evtsExt__SpriteMultitouchJoystick__MultitouchJoystick.MultitouchJoystick.prototype.doStepPreEventsContext.GDObjectObjects1.length = 0;
+gdjs.evtsExt__SpriteMultitouchJoystick__MultitouchJoystick.MultitouchJoystick.prototype.doStepPreEventsContext.GDObjectObjects2.length = 0;
+gdjs.evtsExt__SpriteMultitouchJoystick__MultitouchJoystick.MultitouchJoystick.prototype.doStepPreEventsContext.GDObjectObjects3.length = 0;
+gdjs.evtsExt__SpriteMultitouchJoystick__MultitouchJoystick.MultitouchJoystick.prototype.doStepPreEventsContext.GDObjectObjects4.length = 0;
+gdjs.evtsExt__SpriteMultitouchJoystick__MultitouchJoystick.MultitouchJoystick.prototype.doStepPreEventsContext.GDObjectObjects5.length = 0;
+
 
 return;
 }
@@ -589,6 +645,9 @@ var eventsFunctionContext = {
   _behaviorNamesMap: {
 "Behavior": Behavior
 },
+  globalVariablesForExtension: runtimeScene.getGame().getVariablesForExtension("SpriteMultitouchJoystick"),
+  sceneVariablesForExtension: runtimeScene.getScene().getVariablesForExtension("SpriteMultitouchJoystick"),
+  localVariables: [],
   getObjects: function(objectName) {
     return eventsFunctionContext._objectArraysMap[objectName] || [];
   },
@@ -635,6 +694,9 @@ gdjs.evtsExt__SpriteMultitouchJoystick__MultitouchJoystick.MultitouchJoystick.pr
 gdjs.evtsExt__SpriteMultitouchJoystick__MultitouchJoystick.MultitouchJoystick.prototype.JoystickForceContext.GDObjectObjects2.length = 0;
 
 gdjs.evtsExt__SpriteMultitouchJoystick__MultitouchJoystick.MultitouchJoystick.prototype.JoystickForceContext.eventsList0(runtimeScene, eventsFunctionContext);
+gdjs.evtsExt__SpriteMultitouchJoystick__MultitouchJoystick.MultitouchJoystick.prototype.JoystickForceContext.GDObjectObjects1.length = 0;
+gdjs.evtsExt__SpriteMultitouchJoystick__MultitouchJoystick.MultitouchJoystick.prototype.JoystickForceContext.GDObjectObjects2.length = 0;
+
 
 return Number(eventsFunctionContext.returnValue) || 0;
 }
@@ -679,6 +741,9 @@ var eventsFunctionContext = {
   _behaviorNamesMap: {
 "Behavior": Behavior
 },
+  globalVariablesForExtension: runtimeScene.getGame().getVariablesForExtension("SpriteMultitouchJoystick"),
+  sceneVariablesForExtension: runtimeScene.getScene().getVariablesForExtension("SpriteMultitouchJoystick"),
+  localVariables: [],
   getObjects: function(objectName) {
     return eventsFunctionContext._objectArraysMap[objectName] || [];
   },
@@ -726,6 +791,9 @@ gdjs.evtsExt__SpriteMultitouchJoystick__MultitouchJoystick.MultitouchJoystick.pr
 gdjs.evtsExt__SpriteMultitouchJoystick__MultitouchJoystick.MultitouchJoystick.prototype.SetJoystickForceContext.GDObjectObjects2.length = 0;
 
 gdjs.evtsExt__SpriteMultitouchJoystick__MultitouchJoystick.MultitouchJoystick.prototype.SetJoystickForceContext.eventsList0(runtimeScene, eventsFunctionContext);
+gdjs.evtsExt__SpriteMultitouchJoystick__MultitouchJoystick.MultitouchJoystick.prototype.SetJoystickForceContext.GDObjectObjects1.length = 0;
+gdjs.evtsExt__SpriteMultitouchJoystick__MultitouchJoystick.MultitouchJoystick.prototype.SetJoystickForceContext.GDObjectObjects2.length = 0;
+
 
 return;
 }
@@ -765,6 +833,9 @@ var eventsFunctionContext = {
   _behaviorNamesMap: {
 "Behavior": Behavior
 },
+  globalVariablesForExtension: runtimeScene.getGame().getVariablesForExtension("SpriteMultitouchJoystick"),
+  sceneVariablesForExtension: runtimeScene.getScene().getVariablesForExtension("SpriteMultitouchJoystick"),
+  localVariables: [],
   getObjects: function(objectName) {
     return eventsFunctionContext._objectArraysMap[objectName] || [];
   },
@@ -811,6 +882,9 @@ gdjs.evtsExt__SpriteMultitouchJoystick__MultitouchJoystick.MultitouchJoystick.pr
 gdjs.evtsExt__SpriteMultitouchJoystick__MultitouchJoystick.MultitouchJoystick.prototype.JoystickAngleContext.GDObjectObjects2.length = 0;
 
 gdjs.evtsExt__SpriteMultitouchJoystick__MultitouchJoystick.MultitouchJoystick.prototype.JoystickAngleContext.eventsList0(runtimeScene, eventsFunctionContext);
+gdjs.evtsExt__SpriteMultitouchJoystick__MultitouchJoystick.MultitouchJoystick.prototype.JoystickAngleContext.GDObjectObjects1.length = 0;
+gdjs.evtsExt__SpriteMultitouchJoystick__MultitouchJoystick.MultitouchJoystick.prototype.JoystickAngleContext.GDObjectObjects2.length = 0;
+
 
 return Number(eventsFunctionContext.returnValue) || 0;
 }
@@ -855,6 +929,9 @@ var eventsFunctionContext = {
   _behaviorNamesMap: {
 "Behavior": Behavior
 },
+  globalVariablesForExtension: runtimeScene.getGame().getVariablesForExtension("SpriteMultitouchJoystick"),
+  sceneVariablesForExtension: runtimeScene.getScene().getVariablesForExtension("SpriteMultitouchJoystick"),
+  localVariables: [],
   getObjects: function(objectName) {
     return eventsFunctionContext._objectArraysMap[objectName] || [];
   },
@@ -902,6 +979,9 @@ gdjs.evtsExt__SpriteMultitouchJoystick__MultitouchJoystick.MultitouchJoystick.pr
 gdjs.evtsExt__SpriteMultitouchJoystick__MultitouchJoystick.MultitouchJoystick.prototype.SetJoystickAngleContext.GDObjectObjects2.length = 0;
 
 gdjs.evtsExt__SpriteMultitouchJoystick__MultitouchJoystick.MultitouchJoystick.prototype.SetJoystickAngleContext.eventsList0(runtimeScene, eventsFunctionContext);
+gdjs.evtsExt__SpriteMultitouchJoystick__MultitouchJoystick.MultitouchJoystick.prototype.SetJoystickAngleContext.GDObjectObjects1.length = 0;
+gdjs.evtsExt__SpriteMultitouchJoystick__MultitouchJoystick.MultitouchJoystick.prototype.SetJoystickAngleContext.GDObjectObjects2.length = 0;
+
 
 return;
 }
@@ -942,6 +1022,9 @@ var eventsFunctionContext = {
   _behaviorNamesMap: {
 "Behavior": Behavior
 },
+  globalVariablesForExtension: runtimeScene.getGame().getVariablesForExtension("SpriteMultitouchJoystick"),
+  sceneVariablesForExtension: runtimeScene.getScene().getVariablesForExtension("SpriteMultitouchJoystick"),
+  localVariables: [],
   getObjects: function(objectName) {
     return eventsFunctionContext._objectArraysMap[objectName] || [];
   },
@@ -988,6 +1071,9 @@ gdjs.evtsExt__SpriteMultitouchJoystick__MultitouchJoystick.MultitouchJoystick.pr
 gdjs.evtsExt__SpriteMultitouchJoystick__MultitouchJoystick.MultitouchJoystick.prototype.StickForceXContext.GDObjectObjects2.length = 0;
 
 gdjs.evtsExt__SpriteMultitouchJoystick__MultitouchJoystick.MultitouchJoystick.prototype.StickForceXContext.eventsList0(runtimeScene, eventsFunctionContext);
+gdjs.evtsExt__SpriteMultitouchJoystick__MultitouchJoystick.MultitouchJoystick.prototype.StickForceXContext.GDObjectObjects1.length = 0;
+gdjs.evtsExt__SpriteMultitouchJoystick__MultitouchJoystick.MultitouchJoystick.prototype.StickForceXContext.GDObjectObjects2.length = 0;
+
 
 return Number(eventsFunctionContext.returnValue) || 0;
 }
@@ -1028,6 +1114,9 @@ var eventsFunctionContext = {
   _behaviorNamesMap: {
 "Behavior": Behavior
 },
+  globalVariablesForExtension: runtimeScene.getGame().getVariablesForExtension("SpriteMultitouchJoystick"),
+  sceneVariablesForExtension: runtimeScene.getScene().getVariablesForExtension("SpriteMultitouchJoystick"),
+  localVariables: [],
   getObjects: function(objectName) {
     return eventsFunctionContext._objectArraysMap[objectName] || [];
   },
@@ -1074,6 +1163,9 @@ gdjs.evtsExt__SpriteMultitouchJoystick__MultitouchJoystick.MultitouchJoystick.pr
 gdjs.evtsExt__SpriteMultitouchJoystick__MultitouchJoystick.MultitouchJoystick.prototype.StickForceYContext.GDObjectObjects2.length = 0;
 
 gdjs.evtsExt__SpriteMultitouchJoystick__MultitouchJoystick.MultitouchJoystick.prototype.StickForceYContext.eventsList0(runtimeScene, eventsFunctionContext);
+gdjs.evtsExt__SpriteMultitouchJoystick__MultitouchJoystick.MultitouchJoystick.prototype.StickForceYContext.GDObjectObjects1.length = 0;
+gdjs.evtsExt__SpriteMultitouchJoystick__MultitouchJoystick.MultitouchJoystick.prototype.StickForceYContext.GDObjectObjects2.length = 0;
+
 
 return Number(eventsFunctionContext.returnValue) || 0;
 }
@@ -1127,6 +1219,9 @@ var eventsFunctionContext = {
   _behaviorNamesMap: {
 "Behavior": Behavior
 },
+  globalVariablesForExtension: runtimeScene.getGame().getVariablesForExtension("SpriteMultitouchJoystick"),
+  sceneVariablesForExtension: runtimeScene.getScene().getVariablesForExtension("SpriteMultitouchJoystick"),
+  localVariables: [],
   getObjects: function(objectName) {
     return eventsFunctionContext._objectArraysMap[objectName] || [];
   },
@@ -1174,6 +1269,9 @@ gdjs.evtsExt__SpriteMultitouchJoystick__MultitouchJoystick.MultitouchJoystick.pr
 gdjs.evtsExt__SpriteMultitouchJoystick__MultitouchJoystick.MultitouchJoystick.prototype.IsDirectionPushed4WayContext.GDObjectObjects2.length = 0;
 
 gdjs.evtsExt__SpriteMultitouchJoystick__MultitouchJoystick.MultitouchJoystick.prototype.IsDirectionPushed4WayContext.eventsList0(runtimeScene, eventsFunctionContext);
+gdjs.evtsExt__SpriteMultitouchJoystick__MultitouchJoystick.MultitouchJoystick.prototype.IsDirectionPushed4WayContext.GDObjectObjects1.length = 0;
+gdjs.evtsExt__SpriteMultitouchJoystick__MultitouchJoystick.MultitouchJoystick.prototype.IsDirectionPushed4WayContext.GDObjectObjects2.length = 0;
+
 
 return !!eventsFunctionContext.returnValue;
 }
@@ -1227,6 +1325,9 @@ var eventsFunctionContext = {
   _behaviorNamesMap: {
 "Behavior": Behavior
 },
+  globalVariablesForExtension: runtimeScene.getGame().getVariablesForExtension("SpriteMultitouchJoystick"),
+  sceneVariablesForExtension: runtimeScene.getScene().getVariablesForExtension("SpriteMultitouchJoystick"),
+  localVariables: [],
   getObjects: function(objectName) {
     return eventsFunctionContext._objectArraysMap[objectName] || [];
   },
@@ -1274,6 +1375,9 @@ gdjs.evtsExt__SpriteMultitouchJoystick__MultitouchJoystick.MultitouchJoystick.pr
 gdjs.evtsExt__SpriteMultitouchJoystick__MultitouchJoystick.MultitouchJoystick.prototype.IsDirectionPushed8WayContext.GDObjectObjects2.length = 0;
 
 gdjs.evtsExt__SpriteMultitouchJoystick__MultitouchJoystick.MultitouchJoystick.prototype.IsDirectionPushed8WayContext.eventsList0(runtimeScene, eventsFunctionContext);
+gdjs.evtsExt__SpriteMultitouchJoystick__MultitouchJoystick.MultitouchJoystick.prototype.IsDirectionPushed8WayContext.GDObjectObjects1.length = 0;
+gdjs.evtsExt__SpriteMultitouchJoystick__MultitouchJoystick.MultitouchJoystick.prototype.IsDirectionPushed8WayContext.GDObjectObjects2.length = 0;
+
 
 return !!eventsFunctionContext.returnValue;
 }
@@ -1323,6 +1427,9 @@ var eventsFunctionContext = {
   _behaviorNamesMap: {
 "Behavior": Behavior
 },
+  globalVariablesForExtension: runtimeScene.getGame().getVariablesForExtension("SpriteMultitouchJoystick"),
+  sceneVariablesForExtension: runtimeScene.getScene().getVariablesForExtension("SpriteMultitouchJoystick"),
+  localVariables: [],
   getObjects: function(objectName) {
     return eventsFunctionContext._objectArraysMap[objectName] || [];
   },
@@ -1369,6 +1476,9 @@ gdjs.evtsExt__SpriteMultitouchJoystick__MultitouchJoystick.MultitouchJoystick.pr
 gdjs.evtsExt__SpriteMultitouchJoystick__MultitouchJoystick.MultitouchJoystick.prototype.IsPressedContext.GDObjectObjects2.length = 0;
 
 gdjs.evtsExt__SpriteMultitouchJoystick__MultitouchJoystick.MultitouchJoystick.prototype.IsPressedContext.eventsList0(runtimeScene, eventsFunctionContext);
+gdjs.evtsExt__SpriteMultitouchJoystick__MultitouchJoystick.MultitouchJoystick.prototype.IsPressedContext.GDObjectObjects1.length = 0;
+gdjs.evtsExt__SpriteMultitouchJoystick__MultitouchJoystick.MultitouchJoystick.prototype.IsPressedContext.GDObjectObjects2.length = 0;
+
 
 return !!eventsFunctionContext.returnValue;
 }
@@ -1415,6 +1525,9 @@ var eventsFunctionContext = {
   _behaviorNamesMap: {
 "Behavior": Behavior
 },
+  globalVariablesForExtension: runtimeScene.getGame().getVariablesForExtension("SpriteMultitouchJoystick"),
+  sceneVariablesForExtension: runtimeScene.getScene().getVariablesForExtension("SpriteMultitouchJoystick"),
+  localVariables: [],
   getObjects: function(objectName) {
     return eventsFunctionContext._objectArraysMap[objectName] || [];
   },
@@ -1461,6 +1574,9 @@ gdjs.evtsExt__SpriteMultitouchJoystick__MultitouchJoystick.MultitouchJoystick.pr
 gdjs.evtsExt__SpriteMultitouchJoystick__MultitouchJoystick.MultitouchJoystick.prototype.ResetContext.GDObjectObjects2.length = 0;
 
 gdjs.evtsExt__SpriteMultitouchJoystick__MultitouchJoystick.MultitouchJoystick.prototype.ResetContext.eventsList0(runtimeScene, eventsFunctionContext);
+gdjs.evtsExt__SpriteMultitouchJoystick__MultitouchJoystick.MultitouchJoystick.prototype.ResetContext.GDObjectObjects1.length = 0;
+gdjs.evtsExt__SpriteMultitouchJoystick__MultitouchJoystick.MultitouchJoystick.prototype.ResetContext.GDObjectObjects2.length = 0;
+
 
 return;
 }
@@ -1500,6 +1616,9 @@ var eventsFunctionContext = {
   _behaviorNamesMap: {
 "Behavior": Behavior
 },
+  globalVariablesForExtension: runtimeScene.getGame().getVariablesForExtension("SpriteMultitouchJoystick"),
+  sceneVariablesForExtension: runtimeScene.getScene().getVariablesForExtension("SpriteMultitouchJoystick"),
+  localVariables: [],
   getObjects: function(objectName) {
     return eventsFunctionContext._objectArraysMap[objectName] || [];
   },
@@ -1546,6 +1665,9 @@ gdjs.evtsExt__SpriteMultitouchJoystick__MultitouchJoystick.MultitouchJoystick.pr
 gdjs.evtsExt__SpriteMultitouchJoystick__MultitouchJoystick.MultitouchJoystick.prototype.ControllerIdentifierContext.GDObjectObjects2.length = 0;
 
 gdjs.evtsExt__SpriteMultitouchJoystick__MultitouchJoystick.MultitouchJoystick.prototype.ControllerIdentifierContext.eventsList0(runtimeScene, eventsFunctionContext);
+gdjs.evtsExt__SpriteMultitouchJoystick__MultitouchJoystick.MultitouchJoystick.prototype.ControllerIdentifierContext.GDObjectObjects1.length = 0;
+gdjs.evtsExt__SpriteMultitouchJoystick__MultitouchJoystick.MultitouchJoystick.prototype.ControllerIdentifierContext.GDObjectObjects2.length = 0;
+
 
 return Number(eventsFunctionContext.returnValue) || 0;
 }
@@ -1589,6 +1711,9 @@ var eventsFunctionContext = {
   _behaviorNamesMap: {
 "Behavior": Behavior
 },
+  globalVariablesForExtension: runtimeScene.getGame().getVariablesForExtension("SpriteMultitouchJoystick"),
+  sceneVariablesForExtension: runtimeScene.getScene().getVariablesForExtension("SpriteMultitouchJoystick"),
+  localVariables: [],
   getObjects: function(objectName) {
     return eventsFunctionContext._objectArraysMap[objectName] || [];
   },
@@ -1636,6 +1761,9 @@ gdjs.evtsExt__SpriteMultitouchJoystick__MultitouchJoystick.MultitouchJoystick.pr
 gdjs.evtsExt__SpriteMultitouchJoystick__MultitouchJoystick.MultitouchJoystick.prototype.SetControllerIdentifierContext.GDObjectObjects2.length = 0;
 
 gdjs.evtsExt__SpriteMultitouchJoystick__MultitouchJoystick.MultitouchJoystick.prototype.SetControllerIdentifierContext.eventsList0(runtimeScene, eventsFunctionContext);
+gdjs.evtsExt__SpriteMultitouchJoystick__MultitouchJoystick.MultitouchJoystick.prototype.SetControllerIdentifierContext.GDObjectObjects1.length = 0;
+gdjs.evtsExt__SpriteMultitouchJoystick__MultitouchJoystick.MultitouchJoystick.prototype.SetControllerIdentifierContext.GDObjectObjects2.length = 0;
+
 
 return;
 }
@@ -1675,6 +1803,9 @@ var eventsFunctionContext = {
   _behaviorNamesMap: {
 "Behavior": Behavior
 },
+  globalVariablesForExtension: runtimeScene.getGame().getVariablesForExtension("SpriteMultitouchJoystick"),
+  sceneVariablesForExtension: runtimeScene.getScene().getVariablesForExtension("SpriteMultitouchJoystick"),
+  localVariables: [],
   getObjects: function(objectName) {
     return eventsFunctionContext._objectArraysMap[objectName] || [];
   },
@@ -1721,6 +1852,9 @@ gdjs.evtsExt__SpriteMultitouchJoystick__MultitouchJoystick.MultitouchJoystick.pr
 gdjs.evtsExt__SpriteMultitouchJoystick__MultitouchJoystick.MultitouchJoystick.prototype.JoystickIdentifierContext.GDObjectObjects2.length = 0;
 
 gdjs.evtsExt__SpriteMultitouchJoystick__MultitouchJoystick.MultitouchJoystick.prototype.JoystickIdentifierContext.eventsList0(runtimeScene, eventsFunctionContext);
+gdjs.evtsExt__SpriteMultitouchJoystick__MultitouchJoystick.MultitouchJoystick.prototype.JoystickIdentifierContext.GDObjectObjects1.length = 0;
+gdjs.evtsExt__SpriteMultitouchJoystick__MultitouchJoystick.MultitouchJoystick.prototype.JoystickIdentifierContext.GDObjectObjects2.length = 0;
+
 
 return "" + eventsFunctionContext.returnValue;
 }
@@ -1764,6 +1898,9 @@ var eventsFunctionContext = {
   _behaviorNamesMap: {
 "Behavior": Behavior
 },
+  globalVariablesForExtension: runtimeScene.getGame().getVariablesForExtension("SpriteMultitouchJoystick"),
+  sceneVariablesForExtension: runtimeScene.getScene().getVariablesForExtension("SpriteMultitouchJoystick"),
+  localVariables: [],
   getObjects: function(objectName) {
     return eventsFunctionContext._objectArraysMap[objectName] || [];
   },
@@ -1811,6 +1948,9 @@ gdjs.evtsExt__SpriteMultitouchJoystick__MultitouchJoystick.MultitouchJoystick.pr
 gdjs.evtsExt__SpriteMultitouchJoystick__MultitouchJoystick.MultitouchJoystick.prototype.SetJoystickIdentifierContext.GDObjectObjects2.length = 0;
 
 gdjs.evtsExt__SpriteMultitouchJoystick__MultitouchJoystick.MultitouchJoystick.prototype.SetJoystickIdentifierContext.eventsList0(runtimeScene, eventsFunctionContext);
+gdjs.evtsExt__SpriteMultitouchJoystick__MultitouchJoystick.MultitouchJoystick.prototype.SetJoystickIdentifierContext.GDObjectObjects1.length = 0;
+gdjs.evtsExt__SpriteMultitouchJoystick__MultitouchJoystick.MultitouchJoystick.prototype.SetJoystickIdentifierContext.GDObjectObjects2.length = 0;
+
 
 return;
 }
@@ -1850,6 +1990,9 @@ var eventsFunctionContext = {
   _behaviorNamesMap: {
 "Behavior": Behavior
 },
+  globalVariablesForExtension: runtimeScene.getGame().getVariablesForExtension("SpriteMultitouchJoystick"),
+  sceneVariablesForExtension: runtimeScene.getScene().getVariablesForExtension("SpriteMultitouchJoystick"),
+  localVariables: [],
   getObjects: function(objectName) {
     return eventsFunctionContext._objectArraysMap[objectName] || [];
   },
@@ -1896,6 +2039,9 @@ gdjs.evtsExt__SpriteMultitouchJoystick__MultitouchJoystick.MultitouchJoystick.pr
 gdjs.evtsExt__SpriteMultitouchJoystick__MultitouchJoystick.MultitouchJoystick.prototype.DeadZoneRadiusContext.GDObjectObjects2.length = 0;
 
 gdjs.evtsExt__SpriteMultitouchJoystick__MultitouchJoystick.MultitouchJoystick.prototype.DeadZoneRadiusContext.eventsList0(runtimeScene, eventsFunctionContext);
+gdjs.evtsExt__SpriteMultitouchJoystick__MultitouchJoystick.MultitouchJoystick.prototype.DeadZoneRadiusContext.GDObjectObjects1.length = 0;
+gdjs.evtsExt__SpriteMultitouchJoystick__MultitouchJoystick.MultitouchJoystick.prototype.DeadZoneRadiusContext.GDObjectObjects2.length = 0;
+
 
 return Number(eventsFunctionContext.returnValue) || 0;
 }
@@ -1940,6 +2086,9 @@ var eventsFunctionContext = {
   _behaviorNamesMap: {
 "Behavior": Behavior
 },
+  globalVariablesForExtension: runtimeScene.getGame().getVariablesForExtension("SpriteMultitouchJoystick"),
+  sceneVariablesForExtension: runtimeScene.getScene().getVariablesForExtension("SpriteMultitouchJoystick"),
+  localVariables: [],
   getObjects: function(objectName) {
     return eventsFunctionContext._objectArraysMap[objectName] || [];
   },
@@ -1987,6 +2136,9 @@ gdjs.evtsExt__SpriteMultitouchJoystick__MultitouchJoystick.MultitouchJoystick.pr
 gdjs.evtsExt__SpriteMultitouchJoystick__MultitouchJoystick.MultitouchJoystick.prototype.SetDeadZoneRadiusContext.GDObjectObjects2.length = 0;
 
 gdjs.evtsExt__SpriteMultitouchJoystick__MultitouchJoystick.MultitouchJoystick.prototype.SetDeadZoneRadiusContext.eventsList0(runtimeScene, eventsFunctionContext);
+gdjs.evtsExt__SpriteMultitouchJoystick__MultitouchJoystick.MultitouchJoystick.prototype.SetDeadZoneRadiusContext.GDObjectObjects1.length = 0;
+gdjs.evtsExt__SpriteMultitouchJoystick__MultitouchJoystick.MultitouchJoystick.prototype.SetDeadZoneRadiusContext.GDObjectObjects2.length = 0;
+
 
 return;
 }
@@ -2030,6 +2182,9 @@ var eventsFunctionContext = {
   _behaviorNamesMap: {
 "Behavior": Behavior
 },
+  globalVariablesForExtension: runtimeScene.getGame().getVariablesForExtension("SpriteMultitouchJoystick"),
+  sceneVariablesForExtension: runtimeScene.getScene().getVariablesForExtension("SpriteMultitouchJoystick"),
+  localVariables: [],
   getObjects: function(objectName) {
     return eventsFunctionContext._objectArraysMap[objectName] || [];
   },
@@ -2077,6 +2232,9 @@ gdjs.evtsExt__SpriteMultitouchJoystick__MultitouchJoystick.MultitouchJoystick.pr
 gdjs.evtsExt__SpriteMultitouchJoystick__MultitouchJoystick.MultitouchJoystick.prototype.ForceStartPressingContext.GDObjectObjects2.length = 0;
 
 gdjs.evtsExt__SpriteMultitouchJoystick__MultitouchJoystick.MultitouchJoystick.prototype.ForceStartPressingContext.eventsList0(runtimeScene, eventsFunctionContext);
+gdjs.evtsExt__SpriteMultitouchJoystick__MultitouchJoystick.MultitouchJoystick.prototype.ForceStartPressingContext.GDObjectObjects1.length = 0;
+gdjs.evtsExt__SpriteMultitouchJoystick__MultitouchJoystick.MultitouchJoystick.prototype.ForceStartPressingContext.GDObjectObjects2.length = 0;
+
 
 return;
 }

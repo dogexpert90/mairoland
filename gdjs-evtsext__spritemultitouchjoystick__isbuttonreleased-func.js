@@ -15,7 +15,8 @@ gdjs.evtsExt__SpriteMultitouchJoystick__IsButtonReleased.eventsList0 = function(
 
 let isConditionTrue_0 = false;
 isConditionTrue_0 = false;
-/* Unknown instruction - skipped. */if (isConditionTrue_0) {
+isConditionTrue_0 = gdjs.evtTools.variable.getVariableString(gdjs.VariablesContainer.badVariable) == "Released";
+if (isConditionTrue_0) {
 {if (typeof eventsFunctionContext !== 'undefined') { eventsFunctionContext.returnValue = true; }}}
 
 }
@@ -31,6 +32,9 @@ var eventsFunctionContext = {
 },
   _behaviorNamesMap: {
 },
+  globalVariablesForExtension: runtimeScene.getGame().getVariablesForExtension("SpriteMultitouchJoystick"),
+  sceneVariablesForExtension: runtimeScene.getScene().getVariablesForExtension("SpriteMultitouchJoystick"),
+  localVariables: [],
   getObjects: function(objectName) {
     return eventsFunctionContext._objectArraysMap[objectName] || [];
   },
@@ -77,6 +81,7 @@ if (argName === "Button") return Button;
 
 
 gdjs.evtsExt__SpriteMultitouchJoystick__IsButtonReleased.eventsList0(runtimeScene, eventsFunctionContext);
+
 
 return !!eventsFunctionContext.returnValue;
 }

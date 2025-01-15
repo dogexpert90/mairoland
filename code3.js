@@ -1,4 +1,5 @@
 gdjs.DeathCode = {};
+gdjs.DeathCode.localVariables = [];
 gdjs.DeathCode.GDTryAgainObjects1= [];
 gdjs.DeathCode.GDTryAgainObjects2= [];
 gdjs.DeathCode.GDQuitObjects1= [];
@@ -96,6 +97,13 @@ gdjs.DeathCode.GDDeadObjects1.length = 0;
 gdjs.DeathCode.GDDeadObjects2.length = 0;
 
 gdjs.DeathCode.eventsList2(runtimeScene);
+gdjs.DeathCode.GDTryAgainObjects1.length = 0;
+gdjs.DeathCode.GDTryAgainObjects2.length = 0;
+gdjs.DeathCode.GDQuitObjects1.length = 0;
+gdjs.DeathCode.GDQuitObjects2.length = 0;
+gdjs.DeathCode.GDDeadObjects1.length = 0;
+gdjs.DeathCode.GDDeadObjects2.length = 0;
+
 
 return;
 

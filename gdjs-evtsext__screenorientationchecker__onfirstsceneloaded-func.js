@@ -15,7 +15,7 @@ gdjs.evtsExt__ScreenOrientationChecker__onFirstSceneLoaded.eventsList0 = functio
 
 let isConditionTrue_0 = false;
 {
-{eventsFunctionContext.globalVariablesForExtension.getFromIndex(0).setString(gdjs.evtsExt__ScreenOrientationChecker__ProjectOrientation.func(runtimeScene, (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined)));
+{gdjs.VariablesContainer.badVariable.setString(gdjs.evtsExt__ScreenOrientationChecker__ProjectOrientation.func(runtimeScene, (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined)));
 }}
 
 }

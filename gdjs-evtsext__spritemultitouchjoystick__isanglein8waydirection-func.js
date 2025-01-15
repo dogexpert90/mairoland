@@ -156,6 +156,9 @@ var eventsFunctionContext = {
 },
   _behaviorNamesMap: {
 },
+  globalVariablesForExtension: runtimeScene.getGame().getVariablesForExtension("SpriteMultitouchJoystick"),
+  sceneVariablesForExtension: runtimeScene.getScene().getVariablesForExtension("SpriteMultitouchJoystick"),
+  localVariables: [],
   getObjects: function(objectName) {
     return eventsFunctionContext._objectArraysMap[objectName] || [];
   },
@@ -202,6 +205,7 @@ if (argName === "Direction") return Direction;
 
 
 gdjs.evtsExt__SpriteMultitouchJoystick__IsAngleIn8WayDirection.eventsList0(runtimeScene, eventsFunctionContext);
+
 
 return !!eventsFunctionContext.returnValue;
 }

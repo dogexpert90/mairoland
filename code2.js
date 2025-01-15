@@ -1,4 +1,5 @@
 gdjs.Level_322Code = {};
+gdjs.Level_322Code.localVariables = [];
 gdjs.Level_322Code.forEachIndex2 = 0;
 
 gdjs.Level_322Code.forEachObjects2 = [];
@@ -29,8 +30,8 @@ gdjs.Level_322Code.GDScoreObjects1= [];
 gdjs.Level_322Code.GDScoreObjects2= [];
 gdjs.Level_322Code.GDUks_9595ja_9595portalObjects1= [];
 gdjs.Level_322Code.GDUks_9595ja_9595portalObjects2= [];
-gdjs.Level_322Code.GDFlatDarkJoystickObjects1= [];
-gdjs.Level_322Code.GDFlatDarkJoystickObjects2= [];
+gdjs.Level_322Code.GDFlatLightJoystickObjects1= [];
+gdjs.Level_322Code.GDFlatLightJoystickObjects2= [];
 gdjs.Level_322Code.GDUpObjects1= [];
 gdjs.Level_322Code.GDUpObjects2= [];
 
@@ -96,6 +97,8 @@ if (true) {
 
 };gdjs.Level_322Code.mapOfGDgdjs_9546Level_9595322Code_9546GDPLObjects1Objects = Hashtable.newFrom({"PL": gdjs.Level_322Code.GDPLObjects1});
 gdjs.Level_322Code.mapOfGDgdjs_9546Level_9595322Code_9546GDVastaneObjects1Objects = Hashtable.newFrom({"Vastane": gdjs.Level_322Code.GDVastaneObjects1});
+gdjs.Level_322Code.mapOfGDgdjs_9546Level_9595322Code_9546GDPLObjects1Objects = Hashtable.newFrom({"PL": gdjs.Level_322Code.GDPLObjects1});
+gdjs.Level_322Code.mapOfGDgdjs_9546Level_9595322Code_9546GDUks_95959595ja_95959595portalObjects1Objects = Hashtable.newFrom({"Uks_ja_portal": gdjs.Level_322Code.GDUks_9595ja_9595portalObjects1});
 gdjs.Level_322Code.mapOfGDgdjs_9546Level_9595322Code_9546GDUpObjects1Objects = Hashtable.newFrom({"Up": gdjs.Level_322Code.GDUpObjects1});
 gdjs.Level_322Code.eventsList4 = function(runtimeScene) {
 
@@ -331,116 +334,32 @@ if (isConditionTrue_0) {
 
 {
 
+gdjs.copyArray(runtimeScene.getObjects("PL"), gdjs.Level_322Code.GDPLObjects1);
+gdjs.copyArray(runtimeScene.getObjects("Uks_ja_portal"), gdjs.Level_322Code.GDUks_9595ja_9595portalObjects1);
+
+let isConditionTrue_0 = false;
+isConditionTrue_0 = false;
+isConditionTrue_0 = gdjs.evtTools.object.hitBoxesCollisionTest(gdjs.Level_322Code.mapOfGDgdjs_9546Level_9595322Code_9546GDPLObjects1Objects, gdjs.Level_322Code.mapOfGDgdjs_9546Level_9595322Code_9546GDUks_95959595ja_95959595portalObjects1Objects, false, runtimeScene, false);
+if (isConditionTrue_0) {
+{gdjs.evtTools.runtimeScene.replaceScene(runtimeScene, "Level 2", false);
+}}
+
+}
+
+
+{
+
 
 let isConditionTrue_0 = false;
 isConditionTrue_0 = false;
 isConditionTrue_0 = gdjs.evtTools.input.wasKeyReleased(runtimeScene, "Escape");
 if (isConditionTrue_0) {
 isConditionTrue_0 = false;
-{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(13628020);
+{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(16191468);
 }
 }
 if (isConditionTrue_0) {
 {gdjs.evtTools.runtimeScene.pushScene(runtimeScene, "Menu");
-}}
-
-}
-
-
-{
-
-gdjs.copyArray(runtimeScene.getObjects("FlatDarkJoystick"), gdjs.Level_322Code.GDFlatDarkJoystickObjects1);
-
-let isConditionTrue_0 = false;
-isConditionTrue_0 = false;
-for (var i = 0, k = 0, l = gdjs.Level_322Code.GDFlatDarkJoystickObjects1.length;i<l;++i) {
-    if ( gdjs.Level_322Code.GDFlatDarkJoystickObjects1[i].IsDirectionPushed4Way("Down", (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined)) ) {
-        isConditionTrue_0 = true;
-        gdjs.Level_322Code.GDFlatDarkJoystickObjects1[k] = gdjs.Level_322Code.GDFlatDarkJoystickObjects1[i];
-        ++k;
-    }
-}
-gdjs.Level_322Code.GDFlatDarkJoystickObjects1.length = k;
-if (isConditionTrue_0) {
-gdjs.copyArray(runtimeScene.getObjects("PL"), gdjs.Level_322Code.GDPLObjects1);
-{for(var i = 0, len = gdjs.Level_322Code.GDPLObjects1.length ;i < len;++i) {
-    gdjs.Level_322Code.GDPLObjects1[i].getBehavior("PlatformerObject").simulateDownKey();
-}
-}}
-
-}
-
-
-{
-
-gdjs.copyArray(runtimeScene.getObjects("FlatDarkJoystick"), gdjs.Level_322Code.GDFlatDarkJoystickObjects1);
-
-let isConditionTrue_0 = false;
-isConditionTrue_0 = false;
-for (var i = 0, k = 0, l = gdjs.Level_322Code.GDFlatDarkJoystickObjects1.length;i<l;++i) {
-    if ( gdjs.Level_322Code.GDFlatDarkJoystickObjects1[i].IsDirectionPushed4Way("Up", (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined)) ) {
-        isConditionTrue_0 = true;
-        gdjs.Level_322Code.GDFlatDarkJoystickObjects1[k] = gdjs.Level_322Code.GDFlatDarkJoystickObjects1[i];
-        ++k;
-    }
-}
-gdjs.Level_322Code.GDFlatDarkJoystickObjects1.length = k;
-if (isConditionTrue_0) {
-gdjs.copyArray(runtimeScene.getObjects("PL"), gdjs.Level_322Code.GDPLObjects1);
-{for(var i = 0, len = gdjs.Level_322Code.GDPLObjects1.length ;i < len;++i) {
-    gdjs.Level_322Code.GDPLObjects1[i].getBehavior("PlatformerObject").simulateUpKey();
-}
-}{for(var i = 0, len = gdjs.Level_322Code.GDPLObjects1.length ;i < len;++i) {
-    gdjs.Level_322Code.GDPLObjects1[i].getBehavior("PlatformerObject").simulateLadderKey();
-}
-}}
-
-}
-
-
-{
-
-gdjs.copyArray(runtimeScene.getObjects("FlatDarkJoystick"), gdjs.Level_322Code.GDFlatDarkJoystickObjects1);
-
-let isConditionTrue_0 = false;
-isConditionTrue_0 = false;
-for (var i = 0, k = 0, l = gdjs.Level_322Code.GDFlatDarkJoystickObjects1.length;i<l;++i) {
-    if ( gdjs.Level_322Code.GDFlatDarkJoystickObjects1[i].IsDirectionPushed4Way("Left", (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined)) ) {
-        isConditionTrue_0 = true;
-        gdjs.Level_322Code.GDFlatDarkJoystickObjects1[k] = gdjs.Level_322Code.GDFlatDarkJoystickObjects1[i];
-        ++k;
-    }
-}
-gdjs.Level_322Code.GDFlatDarkJoystickObjects1.length = k;
-if (isConditionTrue_0) {
-gdjs.copyArray(runtimeScene.getObjects("PL"), gdjs.Level_322Code.GDPLObjects1);
-{for(var i = 0, len = gdjs.Level_322Code.GDPLObjects1.length ;i < len;++i) {
-    gdjs.Level_322Code.GDPLObjects1[i].getBehavior("PlatformerObject").simulateLeftKey();
-}
-}}
-
-}
-
-
-{
-
-gdjs.copyArray(runtimeScene.getObjects("FlatDarkJoystick"), gdjs.Level_322Code.GDFlatDarkJoystickObjects1);
-
-let isConditionTrue_0 = false;
-isConditionTrue_0 = false;
-for (var i = 0, k = 0, l = gdjs.Level_322Code.GDFlatDarkJoystickObjects1.length;i<l;++i) {
-    if ( gdjs.Level_322Code.GDFlatDarkJoystickObjects1[i].IsDirectionPushed4Way("Right", (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined)) ) {
-        isConditionTrue_0 = true;
-        gdjs.Level_322Code.GDFlatDarkJoystickObjects1[k] = gdjs.Level_322Code.GDFlatDarkJoystickObjects1[i];
-        ++k;
-    }
-}
-gdjs.Level_322Code.GDFlatDarkJoystickObjects1.length = k;
-if (isConditionTrue_0) {
-gdjs.copyArray(runtimeScene.getObjects("PL"), gdjs.Level_322Code.GDPLObjects1);
-{for(var i = 0, len = gdjs.Level_322Code.GDPLObjects1.length ;i < len;++i) {
-    gdjs.Level_322Code.GDPLObjects1[i].getBehavior("PlatformerObject").simulateRightKey();
-}
 }}
 
 }
@@ -457,6 +376,149 @@ if (isConditionTrue_0) {
 gdjs.copyArray(runtimeScene.getObjects("PL"), gdjs.Level_322Code.GDPLObjects1);
 {for(var i = 0, len = gdjs.Level_322Code.GDPLObjects1.length ;i < len;++i) {
     gdjs.Level_322Code.GDPLObjects1[i].getBehavior("PlatformerObject").simulateJumpKey();
+}
+}}
+
+}
+
+
+{
+
+gdjs.copyArray(runtimeScene.getObjects("FlatLightJoystick"), gdjs.Level_322Code.GDFlatLightJoystickObjects1);
+
+let isConditionTrue_0 = false;
+isConditionTrue_0 = false;
+for (var i = 0, k = 0, l = gdjs.Level_322Code.GDFlatLightJoystickObjects1.length;i<l;++i) {
+    if ( gdjs.Level_322Code.GDFlatLightJoystickObjects1[i].IsDirectionPushed4Way("Right", (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined)) ) {
+        isConditionTrue_0 = true;
+        gdjs.Level_322Code.GDFlatLightJoystickObjects1[k] = gdjs.Level_322Code.GDFlatLightJoystickObjects1[i];
+        ++k;
+    }
+}
+gdjs.Level_322Code.GDFlatLightJoystickObjects1.length = k;
+if (isConditionTrue_0) {
+gdjs.copyArray(runtimeScene.getObjects("PL"), gdjs.Level_322Code.GDPLObjects1);
+{for(var i = 0, len = gdjs.Level_322Code.GDPLObjects1.length ;i < len;++i) {
+    gdjs.Level_322Code.GDPLObjects1[i].getBehavior("PlatformerObject").simulateRightKey();
+}
+}}
+
+}
+
+
+{
+
+gdjs.copyArray(runtimeScene.getObjects("FlatLightJoystick"), gdjs.Level_322Code.GDFlatLightJoystickObjects1);
+
+let isConditionTrue_0 = false;
+isConditionTrue_0 = false;
+for (var i = 0, k = 0, l = gdjs.Level_322Code.GDFlatLightJoystickObjects1.length;i<l;++i) {
+    if ( gdjs.Level_322Code.GDFlatLightJoystickObjects1[i].IsDirectionPushed4Way("Left", (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined)) ) {
+        isConditionTrue_0 = true;
+        gdjs.Level_322Code.GDFlatLightJoystickObjects1[k] = gdjs.Level_322Code.GDFlatLightJoystickObjects1[i];
+        ++k;
+    }
+}
+gdjs.Level_322Code.GDFlatLightJoystickObjects1.length = k;
+if (isConditionTrue_0) {
+gdjs.copyArray(runtimeScene.getObjects("PL"), gdjs.Level_322Code.GDPLObjects1);
+{for(var i = 0, len = gdjs.Level_322Code.GDPLObjects1.length ;i < len;++i) {
+    gdjs.Level_322Code.GDPLObjects1[i].getBehavior("PlatformerObject").simulateLeftKey();
+}
+}}
+
+}
+
+
+{
+
+gdjs.copyArray(runtimeScene.getObjects("FlatLightJoystick"), gdjs.Level_322Code.GDFlatLightJoystickObjects1);
+
+let isConditionTrue_0 = false;
+isConditionTrue_0 = false;
+for (var i = 0, k = 0, l = gdjs.Level_322Code.GDFlatLightJoystickObjects1.length;i<l;++i) {
+    if ( gdjs.Level_322Code.GDFlatLightJoystickObjects1[i].IsDirectionPushed4Way("Down", (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined)) ) {
+        isConditionTrue_0 = true;
+        gdjs.Level_322Code.GDFlatLightJoystickObjects1[k] = gdjs.Level_322Code.GDFlatLightJoystickObjects1[i];
+        ++k;
+    }
+}
+gdjs.Level_322Code.GDFlatLightJoystickObjects1.length = k;
+if (isConditionTrue_0) {
+gdjs.copyArray(runtimeScene.getObjects("PL"), gdjs.Level_322Code.GDPLObjects1);
+{for(var i = 0, len = gdjs.Level_322Code.GDPLObjects1.length ;i < len;++i) {
+    gdjs.Level_322Code.GDPLObjects1[i].getBehavior("PlatformerObject").simulateDownKey();
+}
+}}
+
+}
+
+
+{
+
+gdjs.copyArray(runtimeScene.getObjects("FlatLightJoystick"), gdjs.Level_322Code.GDFlatLightJoystickObjects1);
+
+let isConditionTrue_0 = false;
+isConditionTrue_0 = false;
+for (var i = 0, k = 0, l = gdjs.Level_322Code.GDFlatLightJoystickObjects1.length;i<l;++i) {
+    if ( gdjs.Level_322Code.GDFlatLightJoystickObjects1[i].IsDirectionPushed4Way("Up", (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined)) ) {
+        isConditionTrue_0 = true;
+        gdjs.Level_322Code.GDFlatLightJoystickObjects1[k] = gdjs.Level_322Code.GDFlatLightJoystickObjects1[i];
+        ++k;
+    }
+}
+gdjs.Level_322Code.GDFlatLightJoystickObjects1.length = k;
+if (isConditionTrue_0) {
+gdjs.copyArray(runtimeScene.getObjects("PL"), gdjs.Level_322Code.GDPLObjects1);
+{for(var i = 0, len = gdjs.Level_322Code.GDPLObjects1.length ;i < len;++i) {
+    gdjs.Level_322Code.GDPLObjects1[i].getBehavior("PlatformerObject").simulateUpKey();
+}
+}{for(var i = 0, len = gdjs.Level_322Code.GDPLObjects1.length ;i < len;++i) {
+    gdjs.Level_322Code.GDPLObjects1[i].getBehavior("PlatformerObject").simulateLadderKey();
+}
+}}
+
+}
+
+
+{
+
+
+let isConditionTrue_0 = false;
+isConditionTrue_0 = false;
+isConditionTrue_0 = gdjs.evtTools.systemInfo.isNativeDesktopApp(runtimeScene);
+if (isConditionTrue_0) {
+gdjs.copyArray(runtimeScene.getObjects("FlatLightJoystick"), gdjs.Level_322Code.GDFlatLightJoystickObjects1);
+gdjs.copyArray(runtimeScene.getObjects("Up"), gdjs.Level_322Code.GDUpObjects1);
+{for(var i = 0, len = gdjs.Level_322Code.GDUpObjects1.length ;i < len;++i) {
+    gdjs.Level_322Code.GDUpObjects1[i].hide();
+}
+}{for(var i = 0, len = gdjs.Level_322Code.GDFlatLightJoystickObjects1.length ;i < len;++i) {
+    gdjs.Level_322Code.GDFlatLightJoystickObjects1[i].hide();
+}
+}}
+
+}
+
+
+{
+
+
+let isConditionTrue_0 = false;
+isConditionTrue_0 = false;
+isConditionTrue_0 = gdjs.evtTools.systemInfo.hasTouchScreen(runtimeScene);
+if (isConditionTrue_0) {
+isConditionTrue_0 = false;
+isConditionTrue_0 = gdjs.evtTools.systemInfo.isMobile();
+}
+if (isConditionTrue_0) {
+gdjs.copyArray(runtimeScene.getObjects("FlatLightJoystick"), gdjs.Level_322Code.GDFlatLightJoystickObjects1);
+gdjs.copyArray(runtimeScene.getObjects("Up"), gdjs.Level_322Code.GDUpObjects1);
+{for(var i = 0, len = gdjs.Level_322Code.GDFlatLightJoystickObjects1.length ;i < len;++i) {
+    gdjs.Level_322Code.GDFlatLightJoystickObjects1[i].hide(false);
+}
+}{for(var i = 0, len = gdjs.Level_322Code.GDUpObjects1.length ;i < len;++i) {
+    gdjs.Level_322Code.GDUpObjects1[i].hide(false);
 }
 }}
 
@@ -500,12 +562,39 @@ gdjs.Level_322Code.GDScoreObjects1.length = 0;
 gdjs.Level_322Code.GDScoreObjects2.length = 0;
 gdjs.Level_322Code.GDUks_9595ja_9595portalObjects1.length = 0;
 gdjs.Level_322Code.GDUks_9595ja_9595portalObjects2.length = 0;
-gdjs.Level_322Code.GDFlatDarkJoystickObjects1.length = 0;
-gdjs.Level_322Code.GDFlatDarkJoystickObjects2.length = 0;
+gdjs.Level_322Code.GDFlatLightJoystickObjects1.length = 0;
+gdjs.Level_322Code.GDFlatLightJoystickObjects2.length = 0;
 gdjs.Level_322Code.GDUpObjects1.length = 0;
 gdjs.Level_322Code.GDUpObjects2.length = 0;
 
 gdjs.Level_322Code.eventsList4(runtimeScene);
+gdjs.Level_322Code.GDPLObjects1.length = 0;
+gdjs.Level_322Code.GDPLObjects2.length = 0;
+gdjs.Level_322Code.GDPlatformObjects1.length = 0;
+gdjs.Level_322Code.GDPlatformObjects2.length = 0;
+gdjs.Level_322Code.GDRedelObjects1.length = 0;
+gdjs.Level_322Code.GDRedelObjects2.length = 0;
+gdjs.Level_322Code.GDPlatform_95952Objects1.length = 0;
+gdjs.Level_322Code.GDPlatform_95952Objects2.length = 0;
+gdjs.Level_322Code.GDDead_9595BlockObjects1.length = 0;
+gdjs.Level_322Code.GDDead_9595BlockObjects2.length = 0;
+gdjs.Level_322Code.GDCoinObjects1.length = 0;
+gdjs.Level_322Code.GDCoinObjects2.length = 0;
+gdjs.Level_322Code.GDVastaneObjects1.length = 0;
+gdjs.Level_322Code.GDVastaneObjects2.length = 0;
+gdjs.Level_322Code.GDParem_9595NoolObjects1.length = 0;
+gdjs.Level_322Code.GDParem_9595NoolObjects2.length = 0;
+gdjs.Level_322Code.GDVasak_9595NoolObjects1.length = 0;
+gdjs.Level_322Code.GDVasak_9595NoolObjects2.length = 0;
+gdjs.Level_322Code.GDScoreObjects1.length = 0;
+gdjs.Level_322Code.GDScoreObjects2.length = 0;
+gdjs.Level_322Code.GDUks_9595ja_9595portalObjects1.length = 0;
+gdjs.Level_322Code.GDUks_9595ja_9595portalObjects2.length = 0;
+gdjs.Level_322Code.GDFlatLightJoystickObjects1.length = 0;
+gdjs.Level_322Code.GDFlatLightJoystickObjects2.length = 0;
+gdjs.Level_322Code.GDUpObjects1.length = 0;
+gdjs.Level_322Code.GDUpObjects2.length = 0;
+
 
 return;
 

@@ -53,6 +53,9 @@ var eventsFunctionContext = {
 },
   _behaviorNamesMap: {
 },
+  globalVariablesForExtension: runtimeScene.getGame().getVariablesForExtension("SpriteMultitouchJoystick"),
+  sceneVariablesForExtension: runtimeScene.getScene().getVariablesForExtension("SpriteMultitouchJoystick"),
+  localVariables: [],
   getObjects: function(objectName) {
     return eventsFunctionContext._objectArraysMap[objectName] || [];
   },
@@ -101,6 +104,9 @@ gdjs.evtsExt__SpriteMultitouchJoystick__IsValidJoystickPosition.GDObjectObjects1
 gdjs.evtsExt__SpriteMultitouchJoystick__IsValidJoystickPosition.GDObjectObjects2.length = 0;
 
 gdjs.evtsExt__SpriteMultitouchJoystick__IsValidJoystickPosition.eventsList0(runtimeScene, eventsFunctionContext);
+gdjs.evtsExt__SpriteMultitouchJoystick__IsValidJoystickPosition.GDObjectObjects1.length = 0;
+gdjs.evtsExt__SpriteMultitouchJoystick__IsValidJoystickPosition.GDObjectObjects2.length = 0;
+
 
 return !!eventsFunctionContext.returnValue;
 }

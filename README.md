@@ -1,3 +1,0 @@
-# mairoland
-
-No pircy
