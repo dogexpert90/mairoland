@@ -1,18 +1,12 @@
 {
-  "name": "MarioLand",
-  "short_name": "MarioLand",
-  "id": "com.dogexpert.marioland",
+  "name": "Hugo",
+  "short_name": "Hugo",
+  "id": "com.example.gamename",
   "description": "",
-  "orientation": "any",
+  "orientation": "landscape",
   "start_url": "./index.html",
   "display": "standalone",
   "background_color": "black",
   "categories": ["games", "entertainment"],
-  "icons": [{
-        "src": "DesktopIcon512.png",
-        "sizes": "192x192"
-      },{
-        "src": "DesktopIcon512.png",
-        "sizes": "512x512"
-      }]
+  "icons": []
 }

@@ -22,7 +22,7 @@ let isConditionTrue_0 = false;
 
 };
 
-gdjs.evtsExt__SpriteMultitouchJoystick__JoystickForce.func = function(runtimeScene, ControllerIdentifier, JoystickIdentifier, parentEventsFunctionContext) {
+gdjs.evtsExt__SpriteMultitouchJoystick__JoystickForce.func = function(runtimeScene, ControllerIdentifier, JoystickIdentifier, Coucou, parentEventsFunctionContext) {
 var eventsFunctionContext = {
   _objectsMap: {
 },
@@ -30,9 +30,6 @@ var eventsFunctionContext = {
 },
   _behaviorNamesMap: {
 },
-  globalVariablesForExtension: runtimeScene.getGame().getVariablesForExtension("SpriteMultitouchJoystick"),
-  sceneVariablesForExtension: runtimeScene.getScene().getVariablesForExtension("SpriteMultitouchJoystick"),
-  localVariables: [],
   getObjects: function(objectName) {
     return eventsFunctionContext._objectArraysMap[objectName] || [];
   },
@@ -72,6 +69,7 @@ parentEventsFunctionContext.getInstancesCountOnScene(objectName) :
   getArgument: function(argName) {
 if (argName === "ControllerIdentifier") return ControllerIdentifier;
 if (argName === "JoystickIdentifier") return JoystickIdentifier;
+if (argName === "Coucou") return Coucou;
     return "";
   },
   getOnceTriggers: function() { return runtimeScene.getOnceTriggers(); }
@@ -79,7 +77,6 @@ if (argName === "JoystickIdentifier") return JoystickIdentifier;
 
 
 gdjs.evtsExt__SpriteMultitouchJoystick__JoystickForce.eventsList0(runtimeScene, eventsFunctionContext);
-
 
 return Number(eventsFunctionContext.returnValue) || 0;
 }

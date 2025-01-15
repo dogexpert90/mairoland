@@ -15,8 +15,7 @@ gdjs.evtsExt__SpriteMultitouchJoystick__IsButtonPressed.eventsList0 = function(r
 
 let isConditionTrue_0 = false;
 isConditionTrue_0 = false;
-isConditionTrue_0 = gdjs.evtTools.variable.getVariableString(eventsFunctionContext.sceneVariablesForExtension.getFromIndex(0).getChild(eventsFunctionContext.getArgument("ControllerIdentifier")).getChild("Buttons").getChild(eventsFunctionContext.getArgument("Button")).getChild("State")) == "Pressed";
-if (isConditionTrue_0) {
+/* Unknown instruction - skipped. */if (isConditionTrue_0) {
 {if (typeof eventsFunctionContext !== 'undefined') { eventsFunctionContext.returnValue = true; }}}
 
 }
@@ -32,9 +31,6 @@ var eventsFunctionContext = {
 },
   _behaviorNamesMap: {
 },
-  globalVariablesForExtension: runtimeScene.getGame().getVariablesForExtension("SpriteMultitouchJoystick"),
-  sceneVariablesForExtension: runtimeScene.getScene().getVariablesForExtension("SpriteMultitouchJoystick"),
-  localVariables: [],
   getObjects: function(objectName) {
     return eventsFunctionContext._objectArraysMap[objectName] || [];
   },
@@ -81,7 +77,6 @@ if (argName === "Button") return Button;
 
 
 gdjs.evtsExt__SpriteMultitouchJoystick__IsButtonPressed.eventsList0(runtimeScene, eventsFunctionContext);
-
 
 return !!eventsFunctionContext.returnValue;
 }
