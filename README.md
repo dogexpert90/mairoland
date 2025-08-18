@@ -5,9 +5,9 @@ Nüüd töötab ka mobilis!
 
 Veeb
 
-https://dogexpert90.github.io/mairoland/
+https://dogexperttech.github.io/mairoland/
 
 
 allalaadimine 
 
-https://github.com/dogexpert90/mairoland/releases
+https://github.com/dogexperttech/mairoland/releases
